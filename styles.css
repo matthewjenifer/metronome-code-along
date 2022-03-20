@@ -7,6 +7,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     color: black;
+    user-select: none;
 }
 
 .container {
@@ -17,7 +18,6 @@ body {
 }
 
 .metronome {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -28,7 +28,7 @@ body {
 .bpm-display {
     width: 100%;
     text-align: center;
-    color:blue;
+    color:rgb(59, 141, 168);
     font-weight: bold;
 }
 
@@ -59,7 +59,7 @@ body {
 }
 
 .tempo-settings .adjust-tempo-btn:hover {
-    background: blue;
+    background: rgb(59, 141, 168);
     color: #fff;
 }
 
@@ -73,20 +73,45 @@ body {
 
 input[type=range] {
     -webkit-appearance: none;
-    background-color:transparent;
+    background-color: transparent;
+    width: 70%;
 }
-input[type=range]::-webkit-slider-thumb{
+input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
 }
-input[type=range]::focus{
+input[type=range]:focus {
     outline: none;
 }
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px;
-    height: 16px;border-radius:50%;
-    background-color:blue;
+    height: 16px;
+    border-radius: 50%;
+    background: rgb(59, 141, 168);
+    cursor: pointer;
+    margin-top: -8px;
+}
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgb(59, 141, 168);
+    cursor: pointer;
+    border: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    background: #ddd;
 }
 
 .start-stop {
@@ -94,7 +119,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 50px;
     font-size: 0.7em;
     text-align: center;
-    background: blue;
+    background: rgb(59, 141, 168);
     border-radius: 50%;
     color: #fff;
     line-height: 50px;
@@ -128,4 +153,10 @@ input[type=range]::-webkit-slider-thumb {
 
 .measures .add-beats {
     line-height: 20px;
+}
+
+.beats-per-measure-text{
+    text-align: center;
+    font-size: 0.5em;
+    text-transform: uppercase;
 }
